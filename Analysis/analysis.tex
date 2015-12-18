@@ -31,7 +31,7 @@ A text document/Notepad/spreadsheet with the information that is needed to buy t
 \begin{center}
 \begin{tabular}{ |c|c|c| } 
 \hline
-\bf\underline{Data}                                                                                                      & \bf\underline{Data Source} & \bf\underline{Data Destination}
+\bf\underline{Data}& \bf\underline{Data Source} & \bf\underline{Data Destination}
 
 \\
 \hline
@@ -53,7 +53,7 @@ A text document/Notepad/spreadsheet with the information that is needed to buy t
 \end{center}
 \subsubsection{Algorithms}
 
-search document\\\
+search document\\
 if part name is part looking for\\
 get company information\\
 else\\
@@ -74,29 +74,30 @@ The proposed system will be a database that stores all of the different company'
 
 \\
 \hline
-\ Company Name & Fax/Email & Database\\
+\ Company Name & Fax /Email from supplier & Into the supplier information part of the database\\
 \hline
-\ Company Address & Fax/Email & Database\\ 
+\ Company Address & Fax/Email from supplier & Into the supplier information part of the database\\ 
 \hline
-\ Company Telephone Number & Fax/Email & Database\\
+\ Company Telephone Number & Fax/Email from supplier &Into the supplier information part of the database\\
 \hline
-\ Company's Owner Name & Fax/Email & Database\\
+\ Company's Owner Name & Fax/Email from supplier & Into the supplier information part of the database\\
 \hline
-\ Company's Website & Fax/Email/Online & Database\\
+\ Company's Website & Fax /Email from supplier/Online &Into the supplier information part of the database\\
 \hline
-\ Part Required Information & Company Website/Email & Database\\
+\ Part Required Information & Company Website from internet/Email from supplier & Into the parts part of the database\\
 \hline
-\ Part Required Price & Company Website/Email & Database\\
+\ Part Required Price & Company Website from internet/Email from supplier & Into the parts part of the database\\
 \hline
 \end{tabular}
 \end{center}
 \subsubsection{Algorithms}
 
 \underline{Search for part}\\
+Get part needed from employee\\
 if part is same as part searched for\\
 output company information\\
 elif\\
-if part is not the same as part searched for\\
+part is not the same as part searched for\\
 do not display\\
 else\\
 part is not valid
@@ -104,34 +105,50 @@ part is not valid
 \underline{Adding a part}\\
 while confirm is no\\
 output please enter a part and the corresponding company information\\
-input part and information\\
+Get part and information\\
+check data is valid\\
 output confirm\\
 if confirm is yes\\
 add to database\\
 else \\
-confirm is no
+confirm is no\\
+return to previous window\\
 
 \underline{Deleting a part}\\
 while confirm is no\\
 output please enter a part to remove\\
 input part\\
+check data is valid\\
 output confirm\\
 if confirm is yes\\
 delete from database\\
 else \\
-confirm is no
+confirm is no\\
+return to previous window\\
+
+\underline{Adding a comment}\\
+while confirm is no\\
+output please enter a comment to add\\
+input comment\\
+output please rate your experience with this supplier\\
+input rating\\
+if confirm is yes\\
+add to comments part of database\\
+else\\
+confirm is no\\
+return to previous window\\
 
 \subsubsection{Data flow diagram}
 \begin{flushleft}
 \textbf{Search Function}\\
-\includegraphics[scale=0.7]{FC1.jpg}\\
+\includegraphics[scale=0.7]{FC2new.jpg}\\
 \clearpage
 \textbf{Edit Function}\\\par
-\includegraphics[scale=0.71]{FC2.jpg}\\
+\includegraphics[scale=0.71]{FC3new.png}\\
 \textbf{Delete Function}\\
-\includegraphics[scale=0.7]{FC3.jpg}\\
+\includegraphics[scale=0.7]{FC4new.jpg}\\
 \textbf{Add Function}\\\par
-\includegraphics[scale=0.7]{FC4.jpg}\\
+\includegraphics[scale=0.7]{FC5new.jpg}\\
 \end{flushleft}
 \clearpage
 
@@ -269,7 +286,7 @@ DeleteCompanyName\\
 EditCompanyName\\
 GetCompanyEmail\\
 ShowCompanyEmail\\
-DeleteCompaEmail\\
+DeleteCompanyEmail\\
 EditCompanyEmail\\
 GetCompanyNumber\\
 ShowCompanyNumber\\
@@ -315,14 +332,18 @@ PrintAll\\
 \section{Constraints}
 
 \subsection{Hardware}
-The hardware available is the basic computer hardware. This includes: A mouse, A keyboard, A monitor, A computer, Speakers. Anything else must be discussed with the client to see if the company is willing to buy the additional hardware.
+The hardware available is the basic computer hardware. This includes: A mouse, A keyboard, A monitor, A computer, Speakers. It also includes laptops/desktops and macbooks/apple computers. Anything else must be discussed with the client to see if the company is willing to buy the additional hardware. At the moment, no additional hardware is needed.
 
 \subsection{Software}
-The software available must be downloadable (if needed) and must be available to Windows 7,8 and 10. It should be easily accessed to every user and should run on most if not all computers.
+The software available must be downloadable (if needed) and must be available to Windows 7,8 and 10. It should be easily accessed to every user and should run on most if not all computers. The software that will be used to code and run the program will be python, so the user may have to download python to run it. Python is available to most computers so it shouldn't be that much of a problem.
 \subsection{Time}
+
 The deadline for the project is april 2015.
+
 \subsection{User Knowledge}
-The system must be simple and easy to use by someone who is not familiar with all the functions on a computer. It must have a layout that is easy to access the information and has everything that is needed within one window. There shouldn't be multiple windows open.
+
+The system must be simple and easy to use by someone who kniws how to use a computer but is not that familiar with all the functions on a computer. It must have a layout that is easy to access the information and has everything that is needed within one window. The functionality of the program should be simple but fast/efficient and the program should work with hardware that the user is familiar to such as a mouse and keyboard. There shouldn't be multiple windows open. 
+
 \subsection{Access restrictions}
 Every employee should be allowed to use the software so there are no access restrictions.
 
